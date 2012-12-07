@@ -1,3 +1,4 @@
+require 'perfer'
 require 'stringio'
 require 'base64'
 
@@ -25,12 +26,11 @@ def decode_base64_protobuf(string)
   values
 end
 
-require 'benchmark'
-(ARGV[0] || 5).to_i.times do
-  puts Benchmark.measure {
+Perfer.session 'base 64 decoding' do |s|
+  s.iterate 'protobuf' do |n|
     line = 'CKeTAxCmmfRHGK6trLv1prbkEiCglsTnBDgBMAA='
-    100_000.times do
+    n.times do
       decode_base64_protobuf(line.split[-1]).join("\t")
     end
-  }
+  end
 end
