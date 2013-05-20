@@ -1,3 +1,8 @@
+# License is CC by-nc-sa 1.0, see http://pws.prserv.net/dlissett/ben/bench1.htm
+# and in particular http://pws.prserv.net/dlissett/ben/bench1-ruby-28.htm.
+# This is an adaptation of the benchmark of Martin Richards first written in
+# BCPL and available at http://www.cl.cam.ac.uk/~mr10/Bench.html.
+
 # Fetched from http://flwrpwr.free.fr/Ruby/bench/bench27.rb on 2008-06-01
 
 IDLE = 0
